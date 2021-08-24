@@ -58,7 +58,7 @@ function App() {
         { !loggedIn ? <LoginForm onSubmit={login}></LoginForm> : null }
         <h1>{loggedIn ? 'Logged In' : 'Not Logged In'}</h1>
         <h2>{message}</h2>
-        <button onClick={logout}>Logout</button>
+        { loggedIn ? <button onClick={logout}>Logout</button> : null }
       </header>
     </div>
   );
