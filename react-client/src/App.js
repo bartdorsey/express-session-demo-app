@@ -55,7 +55,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <LoginForm onSubmit={login}></LoginForm>
+        { !loggedIn ? <LoginForm onSubmit={login}></LoginForm> : null }
         <h1>{loggedIn ? 'Logged In' : 'Not Logged In'}</h1>
         <h2>{message}</h2>
         <button onClick={logout}>Logout</button>
